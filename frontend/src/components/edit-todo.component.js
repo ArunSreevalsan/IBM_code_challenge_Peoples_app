@@ -67,7 +67,7 @@ export default class EditTodo extends Component {
     render() {
         return (
             <div>
-                <h3>Update Topic</h3>
+                <h3>Raise your opinion</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Topic: </label>
@@ -91,8 +91,8 @@ export default class EditTodo extends Component {
                                     type="radio"
                                     name="priorityOptions"
                                     id="priorityLow"
-                                    value="Low"
-                                    checked={this.state.todo_priority === "Low"}
+                                    value="Agree"
+                                    checked={this.state.todo_priority === "Agree"}
                                     onChange={this.onChangeTodoPriority}
                                     />
                             <label className="form-check-label">Agree</label>
@@ -102,8 +102,8 @@ export default class EditTodo extends Component {
                                     type="radio"
                                     name="priorityOptions"
                                     id="priorityMedium"
-                                    value="Medium"
-                                    checked={this.state.todo_priority === "Medium"}
+                                    value="Disagree"
+                                    checked={this.state.todo_priority === "Disagree"}
                                     onChange={this.onChangeTodoPriority}
                                     />
                             <label className="form-check-label">Disagree</label>
@@ -113,29 +113,17 @@ export default class EditTodo extends Component {
                                     type="radio"
                                     name="priorityOptions"
                                     id="priorityHigh"
-                                    value="High"
-                                    checked={this.state.todo_priority === "High"}
+                                    value="Neutral"
+                                    checked={this.state.todo_priority === "Neutral"}
                                     onChange={this.onChangeTodoPriority}
                                     />
                             <label className="form-check-label">Neutral</label>
                         </div>
                     </div> 
-                    <div className="form-check">
-                            <input  type="checkbox"
-                                    className="form-check-input"
-                                    id="completedCheckbox"
-                                    name="completedCheckbox"
-                                    onChange={this.onChangeTodoCompleted}
-                                    checked={this.state.todo_completed}
-                                    value={this.state.todo_completed}
-                                    />
-                            <label className="form-check-label" htmlFor="completedCheckbox">
-                                Completed
-                            </label>
-                        </div>
+                    
                         <br />
                         <div className="form-group">
-                            <input type="submit" value="Update Topic" className="btn btn-primary" />
+                            <input type="submit" value="Vote now" className="btn btn-primary" />
                         </div>
                 </form>
             </div>

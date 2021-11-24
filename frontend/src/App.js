@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import TodosList from './components/todos-list.component';
 import CreateTodo from './components/create-todo.component';
 import EditTodo from './components/edit-todo.component';
-
-
+import VoteTodo from './components/vote-todo.component';
+import ResTodo from './components/res-todo.component';
 import logo from './logo.svg';
 
 class App extends Component {
@@ -25,10 +25,19 @@ class App extends Component {
             <div className="collapse navbar-collapse" id="myNavbar">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <Link to="/" className="nav-link">Topics</Link>
+                  <Link to="/" className="nav-link">Poll Topics</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/create" className="nav-link">Create Topic</Link>
+                  <Link to="/create" className="nav-link">Post your concern</Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/Profile" className="nav-link">Profile</Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/results" className="nav-link">Results</Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/x" className="nav-link">Logout</Link>
                 </li>
               </ul>
             </div>
@@ -38,6 +47,8 @@ class App extends Component {
           <Route path='/' exact component={TodosList} />
           <Route path='/edit/:id' component={EditTodo} /> 
           <Route path='/create' component={CreateTodo} /> 
+          <Route path='/Profile' component={VoteTodo} /> 
+          <Route path='/results' component={ResTodo} />
         </div>
       </Router>
     );

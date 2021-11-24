@@ -9,13 +9,13 @@ const Todo = props => (
         <td className = { props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_responsible}</td>
         <td className = { props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_priority}</td>
         <td>
-            <Link to={"/edit/" + props.todo._id}>Vote</Link>
+            <Link to={"/edit/" + props.todo._id}>Show Voting graph</Link>
         </td>
     </tr>
 )
 
 
-export default class TodosList extends Component {
+export default class TodosRes extends Component {
 
     constructor(props) {
         super(props);
@@ -58,7 +58,7 @@ export default class TodosList extends Component {
                         <tr>
                             <th>Topic</th>
                             <th>Description</th>
-                            <th>Opinion</th>
+                            <th>Your Vote</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
