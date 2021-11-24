@@ -1,7 +1,8 @@
 import React , { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-export default class CreateTodo extends Component {
+export default class Login extends Component {
 
     constructor(props) {
         super(props);
@@ -57,10 +58,10 @@ export default class CreateTodo extends Component {
     render() {
         return (
             <div style={{marginTop: 20}}>
-                <h3>POST A SOCIAL ISSUE</h3>
+                <h3>LOGIN</h3>
                 <form onSubmit = {this.onSubmit}>
                     <div className="form-group">
-                        <label>Problem: </label>
+                        <label>Aadhar Number: </label>
                         <input type="text"
                                 className="form-control"
                                 value={this.state.todo_description}
@@ -69,7 +70,7 @@ export default class CreateTodo extends Component {
 
                     </div>
                     <div className="form-group">
-                        <label>Description: </label>
+                        <label>Phone Number: </label>
                         <input type="text"
                                 className="form-control"
                                 value={this.state.todo_responsible}
@@ -78,11 +79,23 @@ export default class CreateTodo extends Component {
                                 
                     </div>
                     <div className="form-group">
+                      
                        
                         
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Raise you issue" className="btn btn-primary" />
+                    <Link to="/list">
+                 <button type="button"  className="btn btn-primary">
+                Login
+                </button>
+                </Link>
+                  
+                <Link to="/register">
+                    
+                 <button type="button"  className="btn btn-success">
+                Register
+                </button>
+                </Link>        
                     </div>
                 </form>
             </div>

@@ -9,7 +9,7 @@ const Todo = props => (
         <td className = { props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_responsible}</td>
         <td className = { props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_priority}</td>
         <td>
-            <Link to={"/edit/" + props.todo._id}>Show Voting graph</Link>
+            <Link to={"/graph" }>Show Voting graph</Link>
         </td>
     </tr>
 )

@@ -59,28 +59,33 @@ export default class VoteTodo extends Component {
             <div style={{marginTop: 20}}>
                 <h3>PROFILE PAGE</h3>
                 <form onSubmit = {this.onSubmit}>
-                    <div className="form-group">
-                        <label>Aadhar Number: </label>
-                        <input type="text"
-                                className="form-control"
-                                value={this.state.todo_description}
-                                onChange={this.onChangeTodoDescription}
-                                />
-
+                    <div>
+                    <img className="rounded-circle account-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDGQO5-8CPA9Hzl5_wLkAf6VtlMw52q7IwRw&usqp=CAU" width="100" height="100"/>
                     </div>
                     <div className="form-group">
-                        <label>Phone Number: </label>
-                        <input type="text"
-                                className="form-control"
-                                value={this.state.todo_responsible}
-                                onChange={this.onChangeTodoResponsible}
-                                />
-                                
+                        <label>Name   : XYZ</label>
                     </div>
                     <div className="form-group">
-                      
-                       
+                        <label>Address: ABC House,XYZ street, Delhi</label>
+                    </div>
+                    <div className="form-group">
+                        <label>Aadhar Number: 999988887777</label>
+                    </div>
+                    <div className="form-group">
+                        <label>Phone Number: 9876543210 </label>        
+                    </div>
+                    <div className="form-group">
+                        <label>Local Body type :    Muncipality </label>
+                    </div>
+                    <div className="form-group">
+                        <label>District: </label>
+                        <label> Palakkad </label>
+                    </div>
+                    <div className="form-group">
+                        <label>State:  Kerala  </label>
                         
+                    </div>
+                    <div className="form-group">  
                     </div>
                     <div className="form-group">
                         <input type="submit" value="People's App" className="btn btn-primary" />

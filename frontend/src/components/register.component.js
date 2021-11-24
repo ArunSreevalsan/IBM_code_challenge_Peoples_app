@@ -1,7 +1,8 @@
 import React , { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-export default class CreateTodo extends Component {
+export default class Register extends Component {
 
     constructor(props) {
         super(props);
@@ -57,10 +58,10 @@ export default class CreateTodo extends Component {
     render() {
         return (
             <div style={{marginTop: 20}}>
-                <h3>POST A SOCIAL ISSUE</h3>
+                <h3>REGISTER</h3>
                 <form onSubmit = {this.onSubmit}>
                     <div className="form-group">
-                        <label>Problem: </label>
+                        <label>Name: </label>
                         <input type="text"
                                 className="form-control"
                                 value={this.state.todo_description}
@@ -69,7 +70,52 @@ export default class CreateTodo extends Component {
 
                     </div>
                     <div className="form-group">
-                        <label>Description: </label>
+                        <label>Address: </label>
+                        <input type="text"
+                                className="form-control"
+                                value={this.state.todo_responsible}
+                                onChange={this.onChangeTodoResponsible}
+                                />
+                                
+                    </div>
+                    <div className="form-group">
+                        <label>Aadhar Number: </label>
+                        <input type="text"
+                                className="form-control"
+                                value={this.state.todo_responsible}
+                                onChange={this.onChangeTodoResponsible}
+                                />
+                                
+                    </div>
+                    <div className="form-group">
+                        <label>Phone Number: </label>
+                        <input type="text"
+                                className="form-control"
+                                value={this.state.todo_responsible}
+                                onChange={this.onChangeTodoResponsible}
+                                />
+                                
+                    </div>
+                    <div className="form-group">
+                        <label>Local Body: </label>
+                        <input type="text"
+                                className="form-control"
+                                value={this.state.todo_responsible}
+                                onChange={this.onChangeTodoResponsible}
+                                />
+                                
+                    </div>
+                    <div className="form-group">
+                        <label>District: </label>
+                        <input type="text"
+                                className="form-control"
+                                value={this.state.todo_responsible}
+                                onChange={this.onChangeTodoResponsible}
+                                />
+                                
+                    </div>
+                    <div className="form-group">
+                        <label>State: </label>
                         <input type="text"
                                 className="form-control"
                                 value={this.state.todo_responsible}
@@ -82,7 +128,12 @@ export default class CreateTodo extends Component {
                         
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Raise you issue" className="btn btn-primary" />
+                    <Link to="/">
+                    
+                    <button type="button"  className="btn btn-success">
+                   Submit
+                   </button>
+                   </Link>     
                     </div>
                 </form>
             </div>

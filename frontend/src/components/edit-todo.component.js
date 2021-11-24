@@ -1,5 +1,6 @@
 import React , { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default class EditTodo extends Component {
 
@@ -123,7 +124,9 @@ export default class EditTodo extends Component {
                     
                         <br />
                         <div className="form-group">
+                        
                             <input type="submit" value="Vote now" className="btn btn-primary" />
+                         
                         </div>
                 </form>
             </div>
